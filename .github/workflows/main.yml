@@ -1,9 +1,10 @@
 name: Main workflow
 on: push
 env:
-    docker_username: ${{ github.actor }}
+    docker_username: ${{ github.lowercase_username }}
     docker_password: ${{ secrets.GITHUB_TOKEN }}
     GIT_COMMIT: ${{ github.sha }}
+    lowercase_username: piped17
 jobs:
   Build:
     runs-on: ubuntu-latest
