@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: run a one-line script
+        run: echo Hello, world!
+
+      - name: run multiline scrip
+        run: |
+          echo good tip for writing emails
+          echo dear person, i hope this email finds you before i do
+          
+          
+        
