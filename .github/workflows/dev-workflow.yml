@@ -1,11 +1,8 @@
-name: Main workflow
+name: Dev workflow
 on: 
  push:
      branches:
-        - main
- pull_request:
-     branches:
-         - main
+      - "dev/**"
 env:
     docker_username: piped17
     docker_password: ${{ secrets.GITHUB_TOKEN }}
